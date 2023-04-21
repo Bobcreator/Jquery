@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+ 
+.container {
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    font-family: Arial, sans-serif;
+    font-size: 48px;
+    color: #333;
+}
+
+.board {
+    width: 400px;
+    height: 400px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.cell {
+    border: 2px solid #333;
+    font-family: Arial, sans-serif;
+    font-size: 96px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cell:nth-child(1), .cell:nth-child(2), .cell:nth-child(4), .cell:nth-child(5), .cell:nth-child(7), .cell:nth-child(8) {
+    border-color: #333 transparent transparent #333;
+}
+
+.cell:nth-child(3), .cell:nth-child(6) {
+    border-color: #333 transparent transparent transparent;
+}
+
+.cell:nth-child(2), .cell:nth-child(5) {
+    border-right: 2px solid #333;
+}
+
+.cell:nth-child(8) {
+    border-right: 2px solid #333;
+}
+
+.cell:nth-child(9) {
+    border-color: #333 
+    ;
+}
+
+.cell:last-child {
+    border-right: 2px solid #333;
+}
+
+.cell:nth-child(7), .cell:nth-child(8), .cell:nth-child(9) {
+    border-bottom: 2px solid #333;
+}
+
+.cell:nth-child(3), .cell:nth-child(6) {
+    border-right: 2px solid #333;
+}
+
+.cell.x {
+    color: red;
+}
+
+.cell.o {
+    color: green;
+}
+
+.message {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    color: #333;
+}
+
+button {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
